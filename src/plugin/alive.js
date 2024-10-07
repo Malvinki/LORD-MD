@@ -17,7 +17,7 @@ const alive = async (m, Matrix) => {
   if (['alive', 'uptime', 'runtime'].includes(cmd)) {
     const width = 800;
     const height = 500;
-    const image = new Jimp(width, height, 'yellow');
+    const image = new Jimp(width, height, 'black');
     const font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
     const textMetrics = Jimp.measureText(font, timeString);
     const textHeight = Jimp.measureTextHeight(font, timeString, width);
@@ -26,13 +26,19 @@ const alive = async (m, Matrix) => {
     image.print(font, x, y, timeString, width, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE);
     const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
     
-    const uptimeMessage = `*𝙻𝚘𝚛𝚍 𝙼𝙳 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴*
-╭❐
-┇ *${days} Day(s)*
-┇ *${hours} Hour(s)*
-┇ *${minutes} Minute(s)*
-┇ *${seconds} Second(s)*
-╰❑
+    const uptimeMessage = `╭═❍ 𝙻𝙾𝚁𝙳 𝙼𝙳 𝚂𝚝𝚊𝚝𝚞𝚜 𝙾𝚟𝚎𝚛𝚟𝚒𝚎𝚠 ❍
+┃❃╭──────────────
+┃❃│ 📆 ${𝚍𝚊𝚢𝚜} 𝙳𝚊𝚢(𝚜)
+┃❃│ 
+┃❃│ 🕰️ ${𝚑𝚘𝚞𝚛𝚜} 𝙷𝚘𝚞𝚛(𝚜)
+┃❃│ 
+┃❃│ ⏳ ${𝚖𝚒𝚗𝚞𝚝𝚎𝚜} 𝙼𝚒𝚗𝚞𝚝𝚎(𝚜)
+┃❃│ 
+┃❃│ ⏲️ ${𝚜𝚎𝚌𝚘𝚗𝚍𝚜} 𝚂𝚎𝚌𝚘𝚗𝚍(𝚜)
+┃❃│ 
+┃❃│  𝙻𝙾𝚁𝙳 𝙼𝙳 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴
+┃❃╰───────────────
+╰═════════════════⊷
 `;
     
     const buttons = [
@@ -64,7 +70,7 @@ const alive = async (m, Matrix) => {
               text: uptimeMessage
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙻𝚘𝚛𝚍 𝙼𝚊𝚕𝚟𝚒𝚗"
+              text: "© ᴘᴏᴡᴇʀᴅ ʙʏ 𝙻𝙾𝚁𝙳 𝙼𝙳"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               ...(await prepareWAMessageMedia({ image: buffer }, { upload: Matrix.waUploadToServer })),
@@ -81,8 +87,8 @@ const alive = async (m, Matrix) => {
               forwardingScore: 999,
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
-                newsletterJid: '263780166288@s.whatsapp.net',
-                newsletterName: "𝙻𝚘𝚛𝚍",
+                newsletterJid: '120363249960769123@newsletter',
+                newsletterName: "LORD-MD",
                 serverMessageId: 143
               }
             }

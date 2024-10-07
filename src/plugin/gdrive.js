@@ -20,7 +20,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
 
       if (gdriveInfo && gdriveInfo.status && gdriveInfo.data) {
         const mediaUrl = gdriveInfo.data;
-        const caption = `> 𝚋𝚢 𝙻𝚘𝚛𝚍 𝙼𝚊𝚕𝚟𝚒𝚗`;
+        const caption = `> © Powered By 𝙻𝙾𝚁𝙳 𝙼𝙳`;
 
         // Inferring the file type based on the file extension
         const extension = mediaUrl.split('.').pop().toLowerCase();

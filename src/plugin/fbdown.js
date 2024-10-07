@@ -80,10 +80,10 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `*𝙻𝙾𝚁𝙳 FACEBOOK POST DOWNLOADER*\n\n> *TITLE*: ${fbData.title}`
+                text: `*𝙻𝙾𝚁𝙳 𝙼𝙳 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙿𝙾𝚂𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁*\n\n> *𝚃𝙸𝚃𝙻𝙴*: ${fbData.title}`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© powered by Mercedes"
+                text: "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙻𝙾𝚁𝙳 𝙼𝙳"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: fbData.thumbnail } }, { upload: Matrix.waUploadToServer })),
@@ -146,7 +146,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
             content = { 
               video: finalMediaBuffer, 
               mimetype: 'video/mp4', 
-              caption: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙻𝚘𝚛𝚍',
+              caption: '> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙻𝙾𝚁𝙳 𝙼𝙳',
             };
             await Matrix.sendMessage(m.from, content, { quoted: m });
           } else {

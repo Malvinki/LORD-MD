@@ -68,7 +68,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
                                 text: `Generated Temporary Email: ${tempEmail}`
                             }),
                             footer: proto.Message.InteractiveMessage.Footer.create({
-                                text: "© Powered By Mercedes"
+                                text: "© Powered By 𝙻𝙾𝚁𝙳 𝙼𝙳"
                             }),
                             header: proto.Message.InteractiveMessage.Header.create({
                                 title: "Temporary Email",
@@ -104,7 +104,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
         const email = selectedId.slice('check_inbox_'.length);
 
         try {
-            await m.React("🕘");
+            await m.React("🫡");
 
             // Check inbox for the provided email
             const inboxResponse = await fetch(`https://tempmail.apinepdev.workers.dev/api/getmessage?email=${email}`);
@@ -156,7 +156,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
                                 text: inboxMessages
                             }),
                             footer: proto.Message.InteractiveMessage.Footer.create({
-                                text: "© Powered By Mercedes"
+                                text: "© Powered By 𝙻𝙾𝚁𝙳 𝙼𝙳"
                             }),
                             header: proto.Message.InteractiveMessage.Header.create({
                                 title: "",

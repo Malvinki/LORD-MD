@@ -11,7 +11,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
     const end = new Date().getTime();
     const responseTime = (end - start) / 1000;
 
-    const text = `*_🔥⃝𝙻𝚘𝚛𝚍 𝙼𝚊𝚕𝚟𝚒𝚗 вσт ѕρєє∂: ${responseTime.toFixed(2)} ms 🎈`;
+    const text = `*_🔥⃝𝙻𝙾𝚁𝙳 𝙼𝙳 вσт ѕρєє∂: ${responseTime.toFixed(2)} s_*`;
     sock.sendMessage(m.from, { text }, { quoted: m });
   }
 }
